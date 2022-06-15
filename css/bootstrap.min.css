@@ -40,7 +40,7 @@ a:hover{color:#157ab5;text-decoration:underline;}
 .span6{width:460px;}
 .span5{width:380px;}
 .span4{width:300px;}
-.span3{width:220px;}
+.span3{width:300px;}
 .span2{width:140px;}
 .span1{width:60px;}
 .offset12{margin-left:980px;}
@@ -280,7 +280,7 @@ table{max-width:100%;background-color:transparent;border-collapse:collapse;borde
 table [class*=span],.row-fluid table [class*=span]{display:table-cell;float:none;margin-left:0;}
 .table .span1{float:none;width:44px;margin-left:0;}
 .table .span2{float:none;width:124px;margin-left:0;}
-.table .span3{float:none;width:204px;margin-left:0;}
+.table .span3{float:none;width:304px;margin-left:0;}
 .table .span4{float:none;width:284px;margin-left:0;}
 .table .span5{float:none;width:364px;margin-left:0;}
 .table .span6{float:none;width:444px;margin-left:0;}

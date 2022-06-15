@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>TShirt Editor</title>
+    <title>Moto Tshirt Design Tool</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -44,6 +44,10 @@
 	      	width: 20px;
 	      	height: 20px;
 	      }
+
+		  .color-preview:hover {
+			transform: scale(1.3);
+		  }
 	      .rotate {  
 		    -webkit-transform:rotate(90deg);
 		    -moz-transform:rotate(90deg);
@@ -87,7 +91,7 @@
 		    	<div class="tabbable"> <!-- Only required for left/right tabs -->
 				  <ul class="nav nav-tabs">
 				  	<li class="active"><a href="#tab1" data-toggle="tab">T-Shirt Options</a></li>				    
-				    <li><a href="#tab2" data-toggle="tab">Gravatar</a></li>
+				    <li><a href="#tab2" data-toggle="tab">Design</a></li>
 				  </ul>
 				  <div class="tab-content">
 				     <div class="tab-pane active" id="tab1">
@@ -127,7 +131,8 @@
 								<li class="color-preview" title="Cherry Red" style="background-color:#c50404;"></li>
 							</ul>
 						</div>			      
-				     </div>				   
+				     </div>	
+					 			   
 				    <div class="tab-pane" id="tab2">
 				    	<div class="well">
 				    		<div class="input-append">
@@ -143,7 +148,8 @@
 
 				    	</div>				      
 				    </div>
-                    <button onclick="SaveDesignAsImage()" class="btn_exportDesign">ExportDesign</button> 
+                    <button onclick="SaveDesignAsImage()" class="btn_exportDesign">Export Design</button>
+					<button onclick="ClearDesigns()" class="btn_clearDesign">Clear Designs</button> 
 				  </div>
 				</div>				
 		    </div>		
@@ -203,14 +209,40 @@
 								
 				<!--	/EDITOR		-->
 		    </div>
-		
+			
+			<div class="span3">
+				<div class="help_section">
+					<h3>How To Guide</h3>
+					<p>
+						<ol class="help">
+							<li class="help_step">There are Two Tabs. <b>T-Shirt Options</b> and <b>Design</b></li>
+							<li class="help_step">Select tab <b>T-Shirt Options</b>. Here you can choose the cloth type from drop down like <b>Short sleeve tshirts</b> or <b>Hoodies</b> etc. So choose that</li>
+							<li class="help_step">Now Choose the colour of the cloth from colour pallete</li>
+							<li class="help_step">Switch to <b>Design</b> tab. Here you can add text and your custom images to the t-shirt</li>
+							<li class="help_step">For adding the Text, you can type in text box and click on arrow icon to put it on tshirt.</li>
+							<li class="help_step">Once the text is on the t-shirt you can select them and change its properties with pallete appearing when you select the text.</li>
+							<li class="help_step">For adding the image, click on <b>Browse Image</b> button and select the image from your PC. Only Jpg and PNG images are supported right now. </li>
+							<li class="help_step">Once the image is uploaded, Click on the image and itwillappear on Tshirt. You can resize and move and rotate it there as you like.</li>
+							<li class="help_step">To swap the front and back of tshirt, there is a <b>rotate View</b> icon. </li>
+							<li class="help_step">If you want to delete an item on Tshirt, then click on the item, a pallete will appear at right top. There click <b>delete</b> button.</li>
+							<li class="help_step">Once your design is ready, Click on <b>Export Design</b> button, The image will be added below. Multiple designs can be added too.</li>
+							<li class="help_step">Once the Design is added below, you can rightclick on the image and save it as PNG image locally and share it with your t-shirt designer.</li>
+							<li class="help_step">If you want to clear the exported designs, then click on <b>Clear Designs</b> button and all the designs exported will be cleared and you can export fresh designs</li>
+						</ol>			
+					</p>
+					  <button type="button" class="btn btn-large btn-block btn-success" name="addToTheBag" id="addToTheBag" hidden>Video Guide</button>
+				</div>		      		       		   
+			  </div>
 		    
 		
 		  </div>
 		
 		</section>
     </div><!-- /container -->
-    
+    <div id="design_container">
+
+	</div>
+
 <!-- Footer ================================================== -->
     <script>
         $(document).ready(function(){
@@ -386,6 +418,12 @@
 		function BrowseCustomImage() {
 			input.click();
 		}
+		
+		function ClearDesigns() {
+			document.getElementById('design_container').innerHTML = "";
+			//document.getElementById('design_container').clear
+		}
+
 		function SaveDesignAsImage() {
 			// Define as node the T-Shirt Div
 			var node = document.getElementById('shirtDiv');
@@ -397,7 +435,7 @@
 				// You can for example to test, add the image at the end of the document
 				var img = new Image();
 				img.src = dataUrl;
-				document.body.appendChild(img);
+				document.getElementById('design_container').appendChild(img);
 			}).catch(function (error) {
 				console.error('oops, something went wrong!', error);
 			});

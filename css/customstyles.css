@@ -60,7 +60,8 @@
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: -.24px;
-    margin: 0;
+    margin: 0.5rem;
+    width: 85%;
     outline: none;
     padding: 1rem 1.3rem;
     quotes: auto;
@@ -81,8 +82,57 @@
   .btn_exportDesign:active {
     transform: scale(0.995);
   }
-  
-
-  
+   
 
   /* End of design for Export Design button */
+
+  /* Start of design for Clear designs button */
+  .btn_clearDesign {
+    appearance: none;
+    background-color: #87ca78;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #33d20f 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    margin: 0.5rem;
+    outline: none;
+    padding: 1rem 1.3rem;
+    quotes: auto;
+    width: 85%;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .btn_clearDesign:hover {
+    background-color: #2d3dcd;
+    color: #dce61a;
+    box-shadow: #ca38da 0 -6px 8px inset;
+    transform: scale(0.9);
+  }
+  
+  .btn_clearDesign:active {
+    transform: scale(0.995);
+  }
+
+  /* End of design for Clear designs button */
+
+  /* Start of design for HowToGuide section */
+
+ 
+
+  .help_section {
+    width: 450px;
+  }
+  /* End of design for HowToGuide section */
