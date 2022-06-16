@@ -34,7 +34,7 @@
 	        padding-top: 60px;	        
 	      }
 	      .color-preview {
-	      	border: 1px solid #CCC;
+	      	border: 2px solid rgb(226, 228, 228);
 	      	margin: 2px;
 	      	zoom: 1;
 	      	vertical-align: top;
@@ -46,7 +46,7 @@
 	      }
 
 		  .color-preview:hover {
-			transform: scale(1.3);
+			transform: scale(1.5);
 		  }
 	      .rotate {  
 		    -webkit-transform:rotate(90deg);
@@ -78,82 +78,69 @@
   <!-- Navbar
     ================================================== -->
 
-    <div class="container">
+    <div class="container flex-container" id="Page_Layout">
 		<section id="typography">
 		  <div class="page-header">
 		    <h1>Customize Mojo T-Shirts</h1>
-		  </div>
-		
+		  </div>		
 		  <!-- Headings & Paragraph Copy -->
-		  <div class="row">			
+		  <div class="row flex-child" id="Design_options">			
 		    <div class="span3">
 		    	
 		    	<div class="tabbable"> <!-- Only required for left/right tabs -->
-				  <ul class="nav nav-tabs">
-				  	<li class="active"><a href="#tab1" data-toggle="tab">T-Shirt Options</a></li>				    
-				    <li><a href="#tab2" data-toggle="tab">Design</a></li>
-				  </ul>
-				  <div class="tab-content">
-				     <div class="tab-pane active" id="tab1">
-				     	<div class="well">
-<!--					      	<h3>Tee Styles</h3>-->
-<!--						      <p>-->
-						      	<select id="tshirttype">                        
-				                    <option value="img/crew_front.png" selected="selected">Short Sleeve Shirts</option>
-				                    <option value="img/mens_longsleeve_front.png">Long Sleeve Shirts</option>                                        
-				                    <option value="img/mens_hoodie_front.png">Hoodies</option>                    
-				                    <option value="img/mens_tank_front.png">Tank tops</option>
-								</select>	
-<!--						      </p>-->								
-					      </div>
-					      <div class="well">
-							<ul class="nav">
-								<li class="color-preview" title="White" style="background-color:#ffffff;"></li>
-								<li class="color-preview" title="Dark Heather" style="background-color:#616161;"></li>
-								<li class="color-preview" title="Gray" style="background-color:#f0f0f0;"></li>
-								<li class="color-preview" title="Charcoal" style="background-color:#5b5b5b;"></li>
-								<li class="color-preview" title="Black" style="background-color:#222222;"></li>
-								<li class="color-preview" title="Heather Orange" style="background-color:#fc8d74;"></li>
-								<li class="color-preview" title="Heather Dark Chocolate" style="background-color:#432d26;"></li>
-								<li class="color-preview" title="Salmon" style="background-color:#eead91;"></li>
-								<li class="color-preview" title="Chesnut" style="background-color:#806355;"></li>
-								<li class="color-preview" title="Dark Chocolate" style="background-color:#382d21;"></li>
-								<li class="color-preview" title="Citrus Yellow" style="background-color:#faef93;"></li>
-								<li class="color-preview" title="Avocado" style="background-color:#aeba5e;"></li>
-								<li class="color-preview" title="Kiwi" style="background-color:#8aa140;"></li>
-								<li class="color-preview" title="Irish Green" style="background-color:#1f6522;"></li>
-								<li class="color-preview" title="Scrub Green" style="background-color:#13afa2;"></li>
-								<li class="color-preview" title="Teal Ice" style="background-color:#b8d5d7;"></li>
-								<li class="color-preview" title="Heather Sapphire" style="background-color:#15aeda;"></li>
-								<li class="color-preview" title="Sky" style="background-color:#a5def8;"></li>
-								<li class="color-preview" title="Antique Sapphire" style="background-color:#0f77c0;"></li>
-								<li class="color-preview" title="Heather Navy" style="background-color:#3469b7;"></li>							
-								<li class="color-preview" title="Cherry Red" style="background-color:#c50404;"></li>
-							</ul>
-						</div>			      
-				     </div>	
-					 			   
-				    <div class="tab-pane" id="tab2">
-				    	<div class="well">
-				    		<div class="input-append">
-							  <input class="span2" id="text-string" type="text" placeholder="add text here..."><button id="add-text" class="btn" title="Add text"><i class="icon-share-alt"></i></button>
-							  <hr>
-							</div>
-							<div id="avatarlist">
+					<div class="well tshirt_type">
+						<label> T-Shirt Type </label>
+						<select id="tshirttype">                        
+						  <option value="img/crew_front.png" selected="selected">Short Sleeve Shirts</option>
+						  <option value="img/mens_longsleeve_front.png">Long Sleeve Shirts</option>                                        
+						  <option value="img/mens_hoodie_front.png">Hoodies</option>                    
+						  <option value="img/mens_tank_front.png">Tank tops</option>
+					  	</select>								
+					</div>
+					<div class="well cloth_color">
+						<label id="tshirtColour"> T-Shirt Colour </label>
+						<ul class="nav">
+							<li class="color-preview" title="White" style="background-color:#ffffff;"></li>
+							<li class="color-preview" title="Dark Heather" style="background-color:#616161;"></li>
+							<li class="color-preview" title="Gray" style="background-color:#f0f0f0;"></li>
+							<li class="color-preview" title="Charcoal" style="background-color:#5b5b5b;"></li>
+							<li class="color-preview" title="Black" style="background-color:#222222;"></li>
+							<li class="color-preview" title="Heather Orange" style="background-color:#fc8d74;"></li>
+							<li class="color-preview" title="Heather Dark Chocolate" style="background-color:#432d26;"></li>
+							<li class="color-preview" title="Salmon" style="background-color:#eead91;"></li>
+							<li class="color-preview" title="Chesnut" style="background-color:#806355;"></li>
+							<li class="color-preview" title="Dark Chocolate" style="background-color:#382d21;"></li>
+							<li class="color-preview" title="Citrus Yellow" style="background-color:#faef93;"></li>
+							<li class="color-preview" title="Avocado" style="background-color:#aeba5e;"></li>
+							<li class="color-preview" title="Kiwi" style="background-color:#8aa140;"></li>
+							<li class="color-preview" title="Irish Green" style="background-color:#1f6522;"></li>
+							<li class="color-preview" title="Scrub Green" style="background-color:#13afa2;"></li>
+							<li class="color-preview" title="Teal Ice" style="background-color:#b8d5d7;"></li>
+							<li class="color-preview" title="Heather Sapphire" style="background-color:#15aeda;"></li>
+							<li class="color-preview" title="Sky" style="background-color:#a5def8;"></li>
+							<li class="color-preview" title="Antique Sapphire" style="background-color:#0f77c0;"></li>
+							<li class="color-preview" title="Heather Navy" style="background-color:#3469b7;"></li>							
+							<li class="color-preview" title="Cherry Red" style="background-color:#c50404;"></li>
+						</ul>
+					</div>
+					<div class="well tshirt_design">
+						<label>Custom Design[Text & Image]</label>
+						<div class="input-append">
+							<input class="span2" id="text-string" type="text" placeholder="add text here..."><button id="add-text" class="btn" title="Add text"><i class="icon-share-alt"></i></button>
+							<hr>
+						</div>
+						<div id="avatarlist">
 
-							</div>
-                            
-                            <button onclick="BrowseCustomImage()" class="btn_browseImage">BrowseImage</button>
-							<input id="custom-image" type="file" hidden>
-
-				    	</div>				      
-				    </div>
-                    <button onclick="SaveDesignAsImage()" class="btn_exportDesign">Export Design</button>
-					<button onclick="ClearDesigns()" class="btn_clearDesign">Clear Designs</button> 
-				  </div>
+						</div>
+						
+						<button onclick="BrowseCustomImage()" class="btn_browseImage">BrowseImage</button>
+						<input id="custom-image" type="file" hidden>
+					</div>
+					<button onclick="SaveDesignAsImage()" class="btn_exportDesign">Export Design</button>
+					<button onclick="ClearDesigns()" class="btn_clearDesign">Clear Designs</button>
 				</div>				
-		    </div>		
-		    <div class="span6">		    
+		  </div>		
+		  <div class="span6 flex-child" id="Tshirt_area">		    
 		    		<div align="center" style="min-height: 32px;">
 		    			<div class="clearfix">
 							<div class="btn-group inline pull-left" id="texteditor" style="display:none">						  
@@ -200,24 +187,17 @@
 							<canvas id="tcanvas" width=200 height="400" class="hover" style="-webkit-user-select: none;"></canvas>
 						</div>
 					</div>
-<!--					<div id="shirtBack" class="page" style="width: 530px; height: 630px; position: relative; background-color: rgb(255, 255, 255); display:none;">-->
-<!--						<img src="img/crew_back.png"></img>-->
-<!--						<div id="drawingArea" style="position: absolute;top: 100px;left: 160px;z-index: 10;width: 200px;height: 400px;">					-->
-<!--							<canvas id="backCanvas" width=200 height="400" class="hover" style="-webkit-user-select: none;"></canvas>-->
-<!--						</div>-->
-<!--					</div>						-->
+
 								
 				<!--	/EDITOR		-->
-		    </div>
-			
-			<div class="span3">
+		  </div>			
+		  <div class="span3 flex-child" id="Help_Guide">
 				<div class="help_section">
 					<h3>How To Guide</h3>
 					<p>
 						<ol class="help">
-							<li class="help_step">There are Two Tabs. <b>T-Shirt Options</b> and <b>Design</b></li>
-							<li class="help_step">Select tab <b>T-Shirt Options</b>. Here you can choose the cloth type from drop down like <b>Short sleeve tshirts</b> or <b>Hoodies</b> etc. So choose that</li>
-							<li class="help_step">Now Choose the colour of the cloth from colour pallete</li>
+							<li class="help_step">First choose the Tshirt type from drop down like <b>Short sleeve tshirts</b> or <b>Hoodies</b> etc from <b>T-Shirt Type</b> section</li>
+							<li class="help_step">Now Choose the colour of the cloth from colour pallete in <b>T-Shirt Colour</b> section</li>
 							<li class="help_step">Switch to <b>Design</b> tab. Here you can add text and your custom images to the t-shirt</li>
 							<li class="help_step">For adding the Text, you can type in text box and click on arrow icon to put it on tshirt.</li>
 							<li class="help_step">Once the text is on the t-shirt you can select them and change its properties with pallete appearing when you select the text.</li>
@@ -232,11 +212,7 @@
 					</p>
 					  <button type="button" class="btn btn-large btn-block btn-success" name="addToTheBag" id="addToTheBag" hidden>Video Guide</button>
 				</div>		      		       		   
-			  </div>
-		    
-		
 		  </div>
-		
 		</section>
     </div><!-- /container -->
     <div id="design_container">

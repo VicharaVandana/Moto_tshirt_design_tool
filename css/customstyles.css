@@ -1,7 +1,7 @@
  /* Start of design for Browse image button */
 .btn_browseImage {
     appearance: none;
-    background-color: transparent;
+    background-color:#d8b32b;
     border: 2px solid #1A1A1A;
     border-radius: 15px;
     box-sizing: border-box;
@@ -136,3 +136,42 @@
     width: 450px;
   }
   /* End of design for HowToGuide section */
+
+  /* Start of design for Page Layout section */
+
+  .flex-container {
+    display: flex;
+    height: 100%;
+  }
+
+  .flex-child {
+    min-width: 0
+  }  
+
+  #Design_options { flex: 0 20% } /* Initial width of 25%, won't grow, can shrink if necessary */
+  #Tshirt_area { flex: 45% } /* Initial width of 45%, grows to fill available space, can shrink if necessary */
+  #Help_Guide { flex: 0 30% } /* Initial width of 30%, won't grow, can shrink if necessary */ 
+
+  /* End of design for Page Layout section */
+
+  .tshirt_type{
+    background-color: #87ca78;
+  }
+
+  .tshirt_design{
+    background-color: #94e1e6;
+  }
+
+  label{
+    font-family: cursive;
+    font-size: medium;
+    color: #000000;
+  }
+
+  #tshirtColour{
+    color: #33d20f;
+  }
+
+  .cloth_color{
+    background-color:#0e0e0d;
+  }
