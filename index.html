@@ -388,11 +388,12 @@
 <script type="text/javascript" src="js/tshirtEditor.js"></script>
 	<script type="text/javascript" src="js/jquery.miniColors.min.js"></script>
 	<script>
-		input = document.querySelector("#custom-image");
+		//input_image = document.querySelector("#custom-image");
+		input_image = document.getElementById("custom-image");
 		let file;
 		
 		function BrowseCustomImage() {
-			input.click();
+			input_image.click();
 		}
 		
 		function ClearDesigns() {
@@ -417,7 +418,7 @@
 			});
 		}
 
-		input.addEventListener("change", function(){
+		input_image.addEventListener('change', function(){
 		//getting user select file and [0] this means if user select multiple files then we'll select only the first one
 		file = this.files[0];
 		let fileType = file.type; //getting selected file type
