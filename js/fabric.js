@@ -291,7 +291,7 @@ var Cufon = (function() {
         bold: 700
       }[weight] || parseInt(weight, 10);
       if (weights[weight]) return weights[weight];
-      // http://www.w3.org/TR/CSS21/fonts.html#propdef-font-weight
+      // https://www.w3.org/TR/CSS21/fonts.html#propdef-font-weight
       // Gecko uses x99/x01 for lighter/bolder
       var up = {
         1: 1,
@@ -1236,11 +1236,11 @@ if (typeof exports != 'undefined') {
 
     NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
 
-    See http://www.JSON.org/js.html
+    See https://www.JSON.org/js.html
 
 
     This code should be minified before deployment.
-    See http://javascript.crockford.com/jsmin.html
+    See https://javascript.crockford.com/jsmin.html
 
     USE YOUR OWN COPY. IT IS EXTREMELY UNWISE TO LOAD CODE FROM SERVERS YOU DO
     NOT CONTROL.
@@ -1945,7 +1945,7 @@ fabric.Observable.off = fabric.Observable.stopObserving;
                             fabric.window.setTimeout(callback, 1000 / 60);
                           };
   /**
-    * requestAnimationFrame polyfill based on http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+    * requestAnimationFrame polyfill based on https://paulirish.com/2011/requestanimationframe-for-smart-animating/
     * @method requestAnimFrame
     * @memberOf fabric.util
     * @param {Function} callback Callback to invoke
@@ -3431,7 +3431,7 @@ fabric.util.string = {
     }, { });
 
     // add values parsed from style, which take precedence over attributes
-    // (see: http://www.w3.org/TR/SVG/styling.html#UsingPresentationAttributes)
+    // (see: https://www.w3.org/TR/SVG/styling.html#UsingPresentationAttributes)
 
     ownAttributes = extend(ownAttributes, extend(getGlobalStylesForElement(element), fabric.parseStyleAttribute(element)));
     return extend(parentAttributes, ownAttributes);
@@ -3521,7 +3521,7 @@ fabric.util.string = {
 
         transform_list = '^\\s*(?:' + transforms + '?)\\s*$',
 
-        // http://www.w3.org/TR/SVG/coords.html#TransformAttribute
+        // https://www.w3.org/TR/SVG/coords.html#TransformAttribute
         reTransformList = new RegExp(transform_list),
         // == end transform regexp
 
@@ -3791,7 +3791,7 @@ fabric.util.string = {
 
     var reAllowedSVGTagNames = /^(path|circle|polygon|polyline|ellipse|rect|line|image|text)$/;
 
-    // http://www.w3.org/TR/SVG/coords.html#ViewBoxAttribute
+    // https://www.w3.org/TR/SVG/coords.html#ViewBoxAttribute
     // \d doesn't quite cut it (as we need to match an actual float number)
 
     // matches, e.g.: +14.56e-12, etc.
@@ -3834,7 +3834,7 @@ fabric.util.string = {
 
       var elements = descendants.filter(function(el) {
         return reAllowedSVGTagNames.test(el.tagName) &&
-              !hasAncestorWithNodeName(el, /^(?:pattern|defs)$/); // http://www.w3.org/TR/SVG/struct.html#DefsElement
+              !hasAncestorWithNodeName(el, /^(?:pattern|defs)$/); // https://www.w3.org/TR/SVG/struct.html#DefsElement
       });
 
       if (!elements || (elements && !elements.length)) return;
@@ -4118,7 +4118,7 @@ fabric.util.string = {
     /**
      * @method fromElement
      * @static
-     * @see http://www.w3.org/TR/SVG/pservers.html#LinearGradientElement
+     * @see https://www.w3.org/TR/SVG/pservers.html#LinearGradientElement
      */
     fromElement: function(el, instance) {
 
@@ -5668,10 +5668,10 @@ fabric.util.string = {
       var markup = [
         '<?xml version="1.0" standalone="no" ?>',
           '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" ',
-            '"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">',
+            '"https://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">',
           '<svg ',
-            'xmlns="http://www.w3.org/2000/svg" ',
-            'xmlns:xlink="http://www.w3.org/1999/xlink" ',
+            'xmlns="https://www.w3.org/2000/svg" ',
+            'xmlns:xlink="https://www.w3.org/1999/xlink" ',
             'version="1.1" ',
             'width="', this.width, '" ',
             'height="', this.height, '" ',
@@ -6474,8 +6474,8 @@ fabric.util.string = {
           x = xy.x,
           y = xy.y;
 
-      // http://www.geog.ubc.ca/courses/klink/gis.notes/ncgia/u32.html
-      // http://idav.ucdavis.edu/~okreylos/TAship/Spring2000/PointInPolygon.html
+      // https://www.geog.ubc.ca/courses/klink/gis.notes/ncgia/u32.html
+      // https://idav.ucdavis.edu/~okreylos/TAship/Spring2000/PointInPolygon.html
 
       // we iterate through each object. If target found, return it.
       var iLines = target._getImageLines(target.oCoords),
@@ -9463,7 +9463,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
   /**
    * List of attribute names to account for when parsing SVG element (used by `fabric.Line.fromElement`)
    * @static
-   * @see http://www.w3.org/TR/SVG/shapes.html#LineElement
+   * @see https://www.w3.org/TR/SVG/shapes.html#LineElement
    */
   fabric.Line.ATTRIBUTE_NAMES = 'x1 y1 x2 y2 stroke stroke-width transform'.split(' ');
 
@@ -9625,7 +9625,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
   /**
    * List of attribute names to account for when parsing SVG element (used by {@link fabric.Circle.fromElement})
    * @static
-   * @see: http://www.w3.org/TR/SVG/shapes.html#CircleElement
+   * @see: https://www.w3.org/TR/SVG/shapes.html#CircleElement
    */
   fabric.Circle.ATTRIBUTE_NAMES = 'cx cy r fill fill-opacity opacity stroke stroke-width transform'.split(' ');
 
@@ -9897,7 +9897,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
   /**
    * List of attribute names to account for when parsing SVG element (used by {@link fabric.Ellipse.fromElement})
    * @static
-   * @see http://www.w3.org/TR/SVG/shapes.html#EllipseElement
+   * @see https://www.w3.org/TR/SVG/shapes.html#EllipseElement
    */
   fabric.Ellipse.ATTRIBUTE_NAMES = 'cx cy rx ry fill fill-opacity opacity stroke stroke-width transform'.split(' ');
 
@@ -10272,7 +10272,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
   /**
    * List of attribute names to account for when parsing SVG element (used by `fabric.Polyline.fromElement`)
    * @static
-   * @see: http://www.w3.org/TR/SVG/shapes.html#PolylineElement
+   * @see: https://www.w3.org/TR/SVG/shapes.html#PolylineElement
    */
   fabric.Polyline.ATTRIBUTE_NAMES = 'fill fill-opacity opacity stroke stroke-width transform'.split(' ');
 
@@ -10444,7 +10444,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
   /**
    * List of attribute names to account for when parsing SVG element (used by `fabric.Polygon.fromElement`)
    * @static
-   * @see: http://www.w3.org/TR/SVG/shapes.html#PolygonElement
+   * @see: https://www.w3.org/TR/SVG/shapes.html#PolygonElement
    */
   fabric.Polygon.ATTRIBUTE_NAMES = 'fill fill-opacity opacity stroke stroke-width transform'.split(' ');
 
@@ -11230,7 +11230,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
   /**
    * List of attribute names to account for when parsing SVG element (used by `fabric.Path.fromElement`)
    * @static
-   * @see http://www.w3.org/TR/SVG/paths.html#PathElement
+   * @see https://www.w3.org/TR/SVG/paths.html#PathElement
    */
   fabric.Path.ATTRIBUTE_NAMES = 'd fill fill-opacity opacity fill-rule stroke stroke-width transform'.split(' ');
 
@@ -12407,7 +12407,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
   /**
    * List of attribute names to account for when parsing SVG element (used by {@link fabric.Image.fromElement})
    * @static
-   * @see http://www.w3.org/TR/SVG/struct.html#ImageElement
+   * @see https://www.w3.org/TR/SVG/struct.html#ImageElement
    */
   fabric.Image.ATTRIBUTE_NAMES = 'x y width height fill fill-opacity opacity stroke stroke-width transform xlink:href'.split(' ');
 
@@ -13535,8 +13535,8 @@ fabric.Image.filters.Tint.fromObject = function(object) {
       }
       else {
         // IE 7 & 8 drop newlines and white space on text nodes
-        // see: http://web.student.tuwien.ac.at/~e0226430/innerHtmlQuirk.html
-        // see: http://www.w3schools.com/dom/dom_mozilla_vs_ie.asp
+        // see: https://web.student.tuwien.ac.at/~e0226430/innerHtmlQuirk.html
+        // see: https://www.w3schools.com/dom/dom_mozilla_vs_ie.asp
         el.innerText =  this.text.replace(/\r?\n/gi, '\r');
       }
 

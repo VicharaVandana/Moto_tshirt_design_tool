@@ -296,7 +296,7 @@
 
             function fixSvg() {
                 if (!(clone instanceof SVGElement)) return;
-                clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+                clone.setAttribute('xmlns', 'https://www.w3.org/2000/svg');
 
                 if (!(clone instanceof SVGRectElement)) return;
                 ['width', 'height'].forEach(function (attribute) {
@@ -329,7 +329,7 @@
     function makeSvgDataUri(node, width, height) {
         return Promise.resolve(node)
             .then(function (node) {
-                node.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
+                node.setAttribute('xmlns', 'https://www.w3.org/1999/xhtml');
                 return new XMLSerializer().serializeToString(node);
             })
             .then(util.escapeXhtml)
@@ -337,7 +337,7 @@
                 return '<foreignObject x="0" y="0" width="100%" height="100%">' + xhtml + '</foreignObject>';
             })
             .then(function (foreignObject) {
-                return '<svg xmlns="http://www.w3.org/2000/svg" width="' + width + '" height="' + height + '">' +
+                return '<svg xmlns="https://www.w3.org/2000/svg" width="' + width + '" height="' + height + '">' +
                     foreignObject + '</svg>';
             })
             .then(function (svg) {
@@ -367,7 +367,7 @@
         function mimes() {
             /*
              * Only WOFF and EOT mime types for fonts are 'real'
-             * see http://www.iana.org/assignments/media-types/media-types.xhtml
+             * see https://www.iana.org/assignments/media-types/media-types.xhtml
              */
             var WOFF = 'application/font-woff';
             var JPEG = 'image/jpeg';
@@ -443,7 +443,7 @@
                 return 'u' + fourRandomChars() + index++;
 
                 function fourRandomChars() {
-                    /* see http://stackoverflow.com/a/6248722/2519373 */
+                    /* see https://stackoverflow.com/a/6248722/2519373 */
                     return ('0000' + (Math.random() * Math.pow(36, 4) << 0).toString(36)).slice(-4);
                 }
             };
